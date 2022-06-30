@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DrawDemo</string>
+    <string name="home">HOME</string>
+    <string name="favorite">FAVORITE</string>
+    <string name="history">HISTORY</string>
+    <string name="acount">Acount</string>
+</resources>
