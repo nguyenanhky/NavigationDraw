@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="gst.trainingcourse.day5_nguyenquockhanh.presentation.CardViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/component_space"
+            android:text="Card Holder Name"
+            android:textSize="@dimen/text_size"
+            android:lines="2"
+            app:layout_constraintEnd_toStartOf="@id/barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_card_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/component_space"
+            android:text="Card Number"
+            android:textSize="@dimen/text_size"
+            android:lines="2"
+            app:layout_constraintEnd_toStartOf="@id/barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_name" />
+
+        <TextView
+            android:id="@+id/text_exp_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/component_space"
+            android:text="Expiry Date"
+            android:textSize="@dimen/text_size"
+            android:lines="2"
+            app:layout_constraintEnd_toStartOf="@id/barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_card_number" />
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={viewModel.cardName}"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="@id/text_name" />
+
+        <EditText
+            android:id="@+id/edit_card_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="@={viewModel.cardNumber}"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="@id/text_card_number" />
+
+        <EditText
+            android:id="@+id/edit_exp_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={viewModel.expDate}"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintStart_toEndOf="@id/barrier"
+            app:layout_constraintTop_toTopOf="@id/text_exp_date" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="Save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_exp_date" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

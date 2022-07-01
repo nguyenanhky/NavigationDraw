@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#3C5186"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CardInfoFragment">
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="30dp"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card Information" />
+    <TextView
+        android:id="@+id/tv_cardnumber"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:textSize="40dp"
+        android:text="12345"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_cardname"
+        android:text="Nguyen Van Cuong"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cardnumber"
+        app:layout_constraintStart_toStartOf="@+id/tv_cardnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Expiry date"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_cardname"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cardname" />
+
+    <TextView
+        android:id="@+id/tv_exp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09/18"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F5ABC9"
+        android:text="UPDATE"
+        android:textSize="30dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_exp" />
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#F5ABC9"
+        android:text="CLOSE"
+
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_update" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

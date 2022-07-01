@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#3C5186"
+    android:layout_height="match_parent"
+    tools:context=".fragments.UpdateCardFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="card name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/edt_cardname"
+        app:layout_constraintStart_toStartOf="@+id/edt_cardname" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="card number"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/edt_cardnumber"
+        app:layout_constraintStart_toStartOf="@+id/edt_cardname" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="expiry date"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/edt_exp"
+        app:layout_constraintStart_toStartOf="@+id/edt_cardname" />
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Update card information"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="150dp"
+        android:id="@+id/edt_cardname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:hint="card name"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <EditText
+        android:id="@+id/edt_cardnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="40dp"
+        android:hint="card number"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_cardname" />
+    <EditText
+
+        android:id="@+id/edt_exp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="40dp"
+        android:hint="card expiry date"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_cardnumber" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F5ABC9"
+        android:text="Save"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_exp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

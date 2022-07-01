@@ -1,0 +1,2 @@
+rootProject.name = "day5_fragment"
+include ':app'

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listCardFragment">
+
+    <fragment
+        android:id="@+id/listCardFragment"
+        android:name="com.nguyenvancuong.day5_fragment.fragments.ListCardFragment"
+        android:label="fragment_list_card">
+        <action
+            android:id="@+id/action_list_to_info"
+            app:destination="@id/inforCardFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/inforCardFragment"
+        android:name="com.nguyenvancuong.day5_fragment.fragments.CardInfoFragment"
+        android:label="fragment_infor_card"
+        tools:layout="@layout/fragment_infor_card" >
+        <action
+            android:id="@+id/action_infor_to_update"
+            app:destination="@id/updateCardFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_back_to_listcard"
+            app:destination="@id/listCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateCardFragment"
+        android:name="com.nguyenvancuong.day5_fragment.fragments.UpdateCardFragment"
+        android:label="fragment_update_card"
+        tools:layout="@layout/fragment_update_card" >
+        <action
+            android:id="@+id/action_update_back_to_info"
+            app:destination="@id/inforCardFragment" />
+    </fragment>
+</navigation>
